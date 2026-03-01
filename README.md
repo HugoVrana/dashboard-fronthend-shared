@@ -2,6 +2,21 @@
 
 Shared React components and TypeScript utilities for dashboard apps.
 
+## Setup in consuming apps
+
+Your Next.js apps need Tailwind CSS configured. Add this library to your `tailwind.config.ts` content array:
+
+```typescript
+// tailwind.config.ts
+const config = {
+  content: [
+    // ... your other paths
+    './node_modules/dashboard-frontend-shared/dist/**/*.js',
+  ],
+  // ...
+};
+```
+
 ## Installation
 
 Add to your Next.js app's `package.json`:
@@ -37,20 +52,26 @@ npm uninstall dashboard-frontend-shared && npm install github:HugoVrana/dashboar
 
 ## Development
 
-### Adding components
+### Adding shadcn components
+
+1. Copy the component code from [ui.shadcn.com](https://ui.shadcn.com)
+2. Create the file in `src/components/ui/`
+3. Update the import path for `cn` to `@/lib/utils` → `../../lib/utils`
+4. Export from `src/components/ui/index.ts`
+
+```typescript
+// src/components/ui/button.tsx
+import { cn } from '../../lib/utils';
+// ... rest of shadcn component code
+
+// src/components/ui/index.ts
+export { Button } from './button';
+```
+
+### Adding custom components
 
 1. Create your component in `src/components/`
 2. Export it from `src/components/index.ts`
-
-```typescript
-// src/components/Button.tsx
-export function Button({ children }: { children: React.ReactNode }) {
-  return <button>{children}</button>;
-}
-
-// src/components/index.ts
-export { Button } from './Button';
-```
 
 ### Adding utilities
 

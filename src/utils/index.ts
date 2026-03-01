@@ -1,3 +1,3 @@
 // Export all utility classes and functions from here
 // Example: export { ApiClient } from './ApiClient';
-export {};
+export {cn} from './utils';

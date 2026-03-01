@@ -17,6 +17,10 @@
     "./utils": {
       "types": "./dist/utils/index.d.ts",
       "import": "./dist/utils/index.js"
+    },
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js"
     }
   },
   "files": [
@@ -52,5 +56,13 @@
   "bugs": {
     "url": "https://github.com/HugoVrana/dashboard-fronthend-shared/issues"
   },
-  "homepage": "https://github.com/HugoVrana/dashboard-fronthend-shared#readme"
+  "homepage": "https://github.com/HugoVrana/dashboard-fronthend-shared#readme",
+  "dependencies": {
+    "@base-ui/react": "^1.2.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.575.0",
+    "recharts": "^3.7.0",
+    "tailwind-merge": "^3.5.0"
+  }
 }
