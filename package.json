@@ -1,19 +1,54 @@
 {
-  "name": "dashboard-fronthend-shared",
+  "name": "dashboard-frontend-shared",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Shared React components and TypeScript classes for dashboard apps",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HugoVrana/dashboard-fronthend-shared.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "components",
+    "shared"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/HugoVrana/dashboard-fronthend-shared/issues"
   },
