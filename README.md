@@ -22,7 +22,7 @@ const config = {
 Add to your Next.js app's `package.json`:
 
 ```bash
-npm install github:HugoVrana/dashboard-fronthend-shared
+npm install github:HugoVrana/dashboard-frontend-shared
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ npm update dashboard-frontend-shared
 Or for a clean reinstall:
 
 ```bash
-npm uninstall dashboard-frontend-shared && npm install github:HugoVrana/dashboard-fronthend-shared
+npm uninstall dashboard-frontend-shared && npm install github:HugoVrana/dashboard-frontend-shared
 ```
 
 ## Development
