@@ -189,4 +189,4 @@ function ImageUpload({
   )
 }
 
-export { ImageUpload }
+export { ImageUpload, type ImageUploadProps }
