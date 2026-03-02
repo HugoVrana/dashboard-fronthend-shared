@@ -1,5 +1,8 @@
 {
-  "name": "dashboard-frontend-shared",
+  "name": "@hugovrana/dashboard-frontend-shared",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "version": "1.0.0",
   "description": "Shared React components and TypeScript classes for dashboard apps",
   "type": "module",
